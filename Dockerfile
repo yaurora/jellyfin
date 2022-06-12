@@ -44,7 +44,9 @@ RUN apt-get update \
  && apt-add-repository non-free \
  && apt-get update \
  && apt-get install --no-install-recommends --no-install-suggests -y \
-    intel-media-va-driver-non-free vainfo intel-gpu-tools
+    intel-media-va-driver-non-free \
+    vainfo \
+    intel-gpu-tools
   
 # Intel VAAPI Tone mapping dependencies:
 # Prefer NEO to Beignet since the latter one doesn't support Comet Lake or newer for now.
