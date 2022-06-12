@@ -17,6 +17,6 @@ jobs:
     - name: Build the Docker image
       run: docker build . --file Dockerfile --tag yaurora/jellyfin:latest
     - name: Log in to Docker Hub
-      run: echo "${{ secrets.ACCESS_TOKEN }}" | docker login -u libra146 --password-stdin
+      run: echo "${{ secrets.ACCESS_TOKEN }}" | docker login -u yaurora --password-stdin
     - name: Push image to Docker hub
       run: docker push yaurora/jellyfin:latest
